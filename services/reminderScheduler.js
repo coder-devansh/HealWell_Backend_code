@@ -171,4 +171,3 @@ function calculateNextReminder(scheduledTime, frequency, daysOfWeek = []) {
 console.log("⏰ Reminder Scheduler initialized - checking every minute");
 
 export default cron;
-
