@@ -10,8 +10,6 @@ import chatbotRoutes from "./routes/chatbotRoutes.js";
 import reminderRoutes from "./routes/reminderRoutes.js";
 import nutritionRoutes from "./routes/nutritionRoutes.js";
 import mlPredictionRoutes from "./routes/mlPredictionRoutes.js";
-import placesRoutes from "./routes/placesRoutes.js";
-import { getNearbyHealthcare } from "./controllers/placesController.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -72,9 +70,6 @@ app.use("/api/chatbot", chatbotRoutes);
 app.use("/api/reminders", reminderRoutes);
 app.use("/api/nutrition", nutritionRoutes);
 app.use("/api/ml", mlPredictionRoutes);
-app.use("/api/places", placesRoutes);
-// Alias route as requested: /api/nearby-healthcare
-app.post("/api/nearby-healthcare", getNearbyHealthcare);
 
 // Test route
 app.get("/", (req, res) => {
